@@ -1,0 +1,171 @@
+/* ------------------------- */
+/* YOUR ORIGINAL CSS         */
+/* ------------------------- */
+
+.author-section {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.author-section img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.author-description {
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .author-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .author-section img {
+        margin-bottom: 10px;
+    }
+}
+
+/* ------------------------- */
+/* NEW NAVIGATION + BUTTONS  */
+/* ------------------------- */
+
+/* Medium Grey Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #555555; /* Medium grey */
+    padding: 10px 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    flex-wrap: nowrap;
+}
+
+.nav-left button,
+.nav-right button {
+    padding: 8px 12px; /* slightly smaller buttons */
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+/* White Home / About Author Buttons */
+.side-btn {
+    background: #ffffff;
+    color: #0a4cff;
+    border: 2px solid #ffffff;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.side-btn:hover {
+    background: #dce6ff;
+    border-color: #dce6ff;
+}
+
+/* White Sign In / Sign Up Buttons */
+.auth-btn {
+    background: #ffffff;
+    color: #0a4cff;
+    border: 2px solid #ffffff;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.auth-btn:hover {
+    background: #dce6ff;
+    border-color: #dce6ff;
+}
+
+/* ------------------------- */
+/* MODAL STYLING             */
+/* ------------------------- */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #333;
+}
+
+/* ------------------------- */
+/* READ BOOK BUTTON          */
+/* ------------------------- */
+
+.read-btn {
+    background: #0a4cff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.read-btn:hover {
+    background: #003ecb;
+}
