@@ -259,11 +259,11 @@ input {
     right: 30px;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #e6d9f2;                   /* ← LIGHT LILAC COLOR */
-    border: 2px solid #d4a5e0;                   /* ← DARKER LILAC BORDER */
+    background-color: #e6d9f2;
+    border: 2px solid #d4a5e0;
     border-radius: 10px;
     padding: 25px;
-    width: 300px;
+    width: 380px;                               /* ← INCREASED FROM 300px TO 380px */
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     z-index: 500;
 }
@@ -271,9 +271,10 @@ input {
 .purchase-title {
     font-size: 16px;
     font-weight: 700;
-    color: #4a2d5f;                              /* ← DARK PURPLE TEXT */
+    color: #4a2d5f;
     margin-bottom: 15px;
     text-align: center;
+    white-space: nowrap;                        /* ← KEEPS TEXT IN ONE LINE */
 }
 
 .purchase-links {
@@ -282,21 +283,21 @@ input {
     gap: 12px;
 }
 
-.purchase-links p {
-    font-size: 14px;
-    color: #4a2d5f;
-    margin: 0;
-}
-
 .purchase-links a {
     color: #0a4cff;
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
 }
 
 .purchase-links a:hover {
     color: #003ecb;
+    background-color: rgba(10, 76, 255, 0.1);
     text-decoration: underline;
 }
 
@@ -313,7 +314,7 @@ input {
 
     .purchase-box {
         right: 20px;
-        width: 280px;
+        width: 360px;                           /* ← ADJUSTED FOR TABLETS */
         padding: 20px;
     }
 
@@ -321,8 +322,8 @@ input {
         font-size: 14px;
     }
 
-    .purchase-links p {
-        font-size: 13px;
+    .purchase-links a {
+        font-size: 14px;
     }
 }
 
@@ -363,5 +364,11 @@ input {
         transform: none;
         width: 100%;
         margin: 30px 20px;
+        padding: 20px;
+    }
+
+    .purchase-title {
+        white-space: normal;                    /* ← ALLOWS WRAPPING ON MOBILE */
+        font-size: 14px;
     }
 }
