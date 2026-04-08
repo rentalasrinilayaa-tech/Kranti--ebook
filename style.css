@@ -54,14 +54,14 @@ body {
 }
 
 .nav-title {
-    font-size: 30px;
+    font-size: 40px;   /* Increased */
     font-weight: 700;
     margin: 0;
     font-family: 'Gabriola', 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
 }
 
 .nav-subtitle {
-    font-size: 16px;
+    font-size: 22px;   /* Increased */
     margin-top: 4px;
     color: #e0e0e0;
     font-family: 'Gabriola', 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
@@ -238,18 +238,24 @@ input {
 }
 
 /* ------------------------- */
-/* ABOUT AUTHOR BOX          */
+/* ABOUT AUTHOR AREA FLEX    */
 /* ------------------------- */
+.about-author-area {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 40px;
+}
 
 .about-author-box {
     display: flex;
     gap: 40px;
     padding: 40px;
-    margin-top: 40px;
     background-color: #e8e8e8;
     align-items: flex-start;
     border-top: 2px solid #d0d0d0;
     border-bottom: 2px solid #d0d0d0;
+    flex: 1;
 }
 
 .author-image-section {
@@ -288,21 +294,21 @@ input {
 }
 
 /* ------------------------- */
-/* PURCHASE BOX              */
+/* PURCHASE BOX (AS SIDE BY AUTHOR BOX) */
 /* ------------------------- */
-
 .purchase-box {
-    position: fixed;
-    right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #fff8e1;         /* warm, gold-inspired */
+    position: static;
+    transform: none;
+    margin-top: 0;
+    margin-left: 20px;
+    min-width: 240px;
+    background-color: #fff8e1;
     border: 2px solid #dcc18e;
     border-radius: 12px;
     padding: 20px;
     width: 280px;
     box-shadow: 0 4px 16px rgba(220, 193, 142, 0.18), 0 2px 12px rgba(0,0,0,0.09);
-    z-index: 500;
+    z-index: 1;
 }
 
 .purchase-title {
@@ -353,26 +359,27 @@ input {
         width: 207px;
     }
 
+    .about-author-area {
+        flex-direction: column;
+        gap: 20px;
+    }
     .about-author-box {
         gap: 30px;
         padding: 30px;
     }
-
     .author-picture {
         width: 180px;
         height: 180px;
     }
-
     .purchase-box {
-        right: 20px;
-        width: 260px;
-        padding: 18px;
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+        min-width: unset;
     }
-
     .purchase-title {
         font-size: 15px;
     }
-
     .purchase-links a {
         font-size: 15px;
     }
@@ -390,7 +397,6 @@ input {
     .book-image {
         width: 172px;
     }
-
     .about-author-box {
         flex-direction: column;
         gap: 20px;
@@ -399,31 +405,26 @@ input {
         border-top: 1px solid #d0d0d0;
         border-bottom: 1px solid #d0d0d0;
     }
-
     .author-image-section {
         display: flex;
         justify-content: center;
     }
-
     .author-picture {
         width: 150px;
         height: 150px;
     }
-
     .author-content-section h2,
     .about-author-title {
         font-size: 22px;
     }
-
     .author-content-section p {
         font-size: 14px;
     }
-
     .purchase-box {
-        position: static;
-        transform: none;
+        margin-left: 0;
+        margin-top: 20px;
         width: 100%;
-        margin: 30px 20px;
+        min-width: unset;
         padding: 20px;
     }
 }
