@@ -1,4 +1,12 @@
 /* ------------------------- */
+/* GABRIOLA FONT FACE        */
+/* ------------------------- */
+@font-face {
+    font-family: 'Gabriola';
+    src: local('Gabriola'), local('Gabriola Regular');
+}
+
+/* ------------------------- */
 /* GLOBAL RESET              */
 /* ------------------------- */
 
@@ -19,48 +27,49 @@ body {
 }
 
 /* ------------------------- */
-/* NAVIGATION BAR (UPDATED) */
+/* NAVIGATION BAR (UPDATED)  */
 /* ------------------------- */
 
-/* FIXED NAVIGATION BAR – EXTRA HEIGHT + TOP SPACING */
 .navbar {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* push content downward */
+    align-items: flex-start;
     background: #555555;
-    padding: 30px 20px 20px 20px; /* more padding on top */
+    padding: 30px 20px 20px 20px;
     color: white;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     box-sizing: border-box;
-    height: 110px; /* force enough height */
+    height: 110px;
+    font-family: 'Gabriola', 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.2em;
 }
 
-/* Center container for title + subtitle */
 .nav-center {
     text-align: center;
-    margin-top: 5px; /* pushes text down slightly */
+    margin-top: 5px;
 }
 
-/* Title inside navbar */
 .nav-title {
     font-size: 26px;
     font-weight: 700;
     margin: 0;
+    font-family: 'Gabriola', 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
 }
 
-/* Subtitle inside navbar */
 .nav-subtitle {
     font-size: 14px;
     margin-top: 4px;
     color: #e0e0e0;
+    font-family: 'Gabriola', 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
 }
 
 /* Push page content down so it doesn't hide behind navbar */
 .book-container {
-    margin-top: 160px !important; /* increased to match new navbar height */
+    margin-top: 160px !important;
 }
 
 /* ------------------------- */
@@ -192,7 +201,7 @@ input {
     display: flex;
     gap: 40px;
     padding: 40px;
-    margin-top: 100px; /* Adjusted because navbar is taller */
+    margin-top: 100px;
     background-color: #e8e8e8;
     align-items: flex-start;
 }
@@ -202,22 +211,23 @@ input {
     padding-top: 20px;
 }
 
+/* Enhanced shadow for book image */
 .book-image {
     width: 230px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 24px rgba(60, 36, 7, 0.28), 0 2px 8px rgba(0,0,0,0.09);
 }
 
-.book-description-section {
-    max-width: 600px;
-    flex: 1;
-}
-
-.book-description-section h2 {
-    font-size: 28px;
+/* ---------- Book Title "Gabriola" font ---------- */
+.book-description-section h2,
+.book-title {
+    font-family: 'Gabriola', 'Segoe Script', 'Comic Sans MS', cursive, serif;
+    font-size: 32px;
     color: #1a1a1a;
     margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-weight: normal;
 }
 
 .book-description-section p {
@@ -259,10 +269,15 @@ input {
     flex: 1;
 }
 
-.author-content-section h2 {
-    font-size: 28px;
+/* ---------- About Author Title "Gabriola" font ---------- */
+.author-content-section h2,
+.about-author-title {
+    font-family: 'Gabriola', 'Segoe Script', 'Comic Sans MS', cursive, serif;
+    font-size: 32px;
     color: #1a1a1a;
     margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-weight: normal;
 }
 
 .author-content-section p {
@@ -281,22 +296,23 @@ input {
     right: 30px;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #e6d9f2;
-    border: 2px solid #d4a5e0;
-    border-radius: 10px;
+    background-color: #fff8e1;         /* warm, gold-inspired */
+    border: 2px solid #dcc18e;
+    border-radius: 12px;
     padding: 20px;
     width: 280px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 16px rgba(220, 193, 142, 0.18), 0 2px 12px rgba(0,0,0,0.09);
     z-index: 500;
 }
 
 .purchase-title {
-    font-size: 14px;
-    font-weight: 700;
-    color: #4a2d5f;
+    font-size: 16px;
+    font-weight: bold;
+    color: #7c4806;
     margin-bottom: 15px;
     text-align: center;
     line-height: 1.4;
+    font-family: 'Gabriola', 'Segoe Script', 'Comic Sans MS', cursive, serif;
 }
 
 .purchase-links {
@@ -306,20 +322,20 @@ input {
 }
 
 .purchase-links a {
-    color: #0a4cff;
+    color: #714800;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s;
-    font-size: 15px;
+    transition: 0.18s;
+    font-size: 16px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 6px;
     text-align: center;
     display: block;
+    background: none;
 }
-
 .purchase-links a:hover {
-    color: #003ecb;
-    background-color: rgba(10, 76, 255, 0.1);
+    color: #fff;
+    background-color: #dcc18e;
     text-decoration: underline;
 }
 
@@ -354,11 +370,11 @@ input {
     }
 
     .purchase-title {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .purchase-links a {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
@@ -394,7 +410,8 @@ input {
         height: 150px;
     }
 
-    .author-content-section h2 {
+    .author-content-section h2,
+    .about-author-title {
         font-size: 22px;
     }
 
