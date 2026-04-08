@@ -33,9 +33,9 @@ body {
 .navbar {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; /* stays as before */
     background: #555555;
-    padding: 30px 20px 20px 20px;
+    padding: 18px 20px 10px 20px; /* LESS top/bottom padding */
     color: white;
     position: fixed;
     top: 0;
@@ -50,21 +50,30 @@ body {
 
 .nav-center {
     text-align: center;
-    margin-top: 5px;
+    width: 100%;
+    margin-top: 0;             /* Remove extra downward push */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Move content to top of navbar */
+    height: 100%;
 }
 
 .nav-title {
-    font-size: 40px;   /* Increased */
+    font-size: 40px;
     font-weight: 700;
     margin: 0;
     font-family: 'Gabriola', 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
+    line-height: 1;            /* Reduces extra space below */
 }
 
 .nav-subtitle {
-    font-size: 22px;   /* Increased */
-    margin-top: 4px;
+    font-size: 22px;
+    margin-top: 0;
     color: #e0e0e0;
     font-family: 'Gabriola', 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
+    line-height: 1.1;
+    font-weight: 400;
 }
 
 /* Push page content down so it doesn't hide behind navbar */
