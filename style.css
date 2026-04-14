@@ -43,7 +43,7 @@ body {
     z-index: 1000;
     box-sizing: border-box;
     height: 110px;
-    font-family: 'Gabriola', 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Arial',sans-serif;
     letter-spacing: 1px;
     font-size: 1.2em;
 }
@@ -63,7 +63,7 @@ body {
     font-size: 40px;
     font-weight: 700;
     margin: 0;
-    font-family: 'Gabriola', 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Arial',sans-serif;
     line-height: 1;            /* Reduces extra space below */
 }
 
@@ -71,7 +71,7 @@ body {
     font-size: 22px;
     margin-top: 0;
     color: #e0e0e0;
-    font-family: 'Gabriola', 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Arial',sans-serif;
     line-height: 1.1;
     font-weight: 400;
 }
