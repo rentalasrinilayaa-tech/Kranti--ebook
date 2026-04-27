@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashanan: Ādi | Read Chapter 1</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -34,6 +33,7 @@
                 <div class="hero-actions">
                     <a href="chapter 1 doc.pdf" target="_blank" class="btn btn-primary">Read Chapter 1</a>
                     <a href="#buy" class="btn btn-secondary">Buy the Full Book</a>
+                    <a href="#review" class="btn btn-secondary">Leave a Review</a>
                 </div>
 
                 <div class="hero-meta">
@@ -140,7 +140,6 @@
             </div>
 
             <div class="buy-grid">
-                <!-- UPDATED AMAZON LINK -->
                 <a id="amazonLink" class="buy-card" href="#" target="_blank" rel="noopener noreferrer">
                     <span class="buy-platform">Amazon</span>
                     <span class="buy-action">Buy now</span>
@@ -155,6 +154,33 @@
                     <span class="buy-platform">Notion Press</span>
                     <span class="buy-action">Buy now</span>
                 </a>
+            </div>
+
+            <!-- REVIEW SECTION -->
+            <div class="review-card" id="review">
+                <div class="section-heading center-heading">
+                    <p class="section-label">Review</p>
+                    <h2>Leave a review</h2>
+                </div>
+
+                <p>
+                    If you like the book, please leave a review on
+                    <a id="amazonReviewLink" href="#" target="_blank" rel="noopener noreferrer">Amazon</a>
+                    and
+                    <a href="https://www.goodreads.com/book/show/250517296-dashanan?from_search=true&from_srp=true&qid=7fnWMBexJw&rank=7" target="_blank" rel="noopener noreferrer">Goodreads</a>.
+                </p>
+
+                <div class="review-actions">
+                    <a id="amazonReviewButton" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Review on Amazon</a>
+                    <a href="https://www.goodreads.com/book/show/250517296-dashanan?from_search=true&from_srp=true&qid=7fnWMBexJw&rank=7" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Review on Goodreads</a>
+                </div>
+
+                <p class="goodreads-link">
+                    Goodreads link:
+                    <a href="https://www.goodreads.com/book/show/250517296-dashanan?from_search=true&from_srp=true&qid=7fnWMBexJw&rank=7" target="_blank" rel="noopener noreferrer">
+                        https://www.goodreads.com/book/show/250517296-dashanan
+                    </a>
+                </p>
             </div>
         </div>
     </section>
@@ -173,17 +199,29 @@
             .then(data => {
                 const country = data.country_code;
                 const amazon = document.getElementById("amazonLink");
+                const amazonReviewLink = document.getElementById("amazonReviewLink");
+                const amazonReviewButton = document.getElementById("amazonReviewButton");
+
+                let amazonUrl;
 
                 if (country === "IN") {
-                    amazon.href = "https://amzn.in/d/05gUKKoo";
+                    amazonUrl = "https://amzn.in/d/05gUKKoo";
                 } else if (country === "US") {
-                    amazon.href = "https://a.co/d/09SGWZK7";
+                    amazonUrl = "https://a.co/d/09SGWZK7";
                 } else {
-                    amazon.href = "https://a.co/d/09SGWZK7"; // fallback
+                    amazonUrl = "https://a.co/d/09SGWZK7";
                 }
+
+                amazon.href = amazonUrl;
+                amazonReviewLink.href = amazonUrl;
+                amazonReviewButton.href = amazonUrl;
             })
             .catch(() => {
-                document.getElementById("amazonLink").href = "https://a.co/d/09SGWZK7";
+                const fallbackAmazonUrl = "https://a.co/d/09SGWZK7";
+
+                document.getElementById("amazonLink").href = fallbackAmazonUrl;
+                document.getElementById("amazonReviewLink").href = fallbackAmazonUrl;
+                document.getElementById("amazonReviewButton").href = fallbackAmazonUrl;
             });
     </script>
 
