@@ -98,6 +98,19 @@ a {
     line-height: 0.95;
     font-weight: 700;
     margin-bottom: 14px;
+    
+    /* Gold gradient matching the book cover */
+    background: linear-gradient(
+        135deg,
+        #c8922a 0%,
+        #f0c84a 30%,
+        #e8a820 55%,
+        #fde27a 70%,
+        #b8751e 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .hero-subtitle {
