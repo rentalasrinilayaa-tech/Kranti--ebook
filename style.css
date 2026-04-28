@@ -98,15 +98,15 @@ a {
     line-height: 0.95;
     font-weight: 700;
     margin-bottom: 14px;
-    
-    /* Gold gradient matching the book cover */
+
+    /* Warm amber-gold matching the site's accent palette */
     background: linear-gradient(
         135deg,
-        #c8922a 0%,
-        #f0c84a 30%,
-        #e8a820 55%,
-        #fde27a 70%,
-        #b8751e 100%
+        #b07a2a 0%,
+        #e8b84b 28%,
+        #f5d070 50%,
+        #d4952e 72%,
+        #8b5f1f 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
